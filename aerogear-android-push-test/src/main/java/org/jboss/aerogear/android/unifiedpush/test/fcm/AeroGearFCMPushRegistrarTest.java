@@ -55,8 +55,8 @@ import static org.mockito.Mockito.when;
 @RunWith(AndroidJUnit4.class)
 public class AeroGearFCMPushRegistrarTest extends PatchedActivityInstrumentationTestCase {
 
-    private static final String TEST_SENDER_ID = "272275396485";
-    private static final String TEST_REGISTRAR_PREFERENCES_KEY = "org.jboss.aerogear.android.unifiedpush.gcm.AeroGearGCMPushRegistrar:272275396485";
+    private static final String TEST_SENDER_ID = "1:272275396485:android:f36173e948059ccb";
+    private static final String TEST_REGISTRAR_PREFERENCES_KEY = "org.jboss.aerogear.android.unifiedpush.gcm.AeroGearGCMPushRegistrar:1:272275396485:android:f36173e948059ccb";
     private static final String TEST_SENDER_PASSWORD = "Password";
     private static final String TEST_SENDER_VARIANT = "Variant";
     private static final String[] CATEGORIES = {"test", "anotherTest"};

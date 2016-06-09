@@ -21,6 +21,8 @@ import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.util.Base64;
 import android.util.Log;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
@@ -128,10 +130,19 @@ public class AeroGearFCMPushRegistrar implements PushRegistrar, MetricsSender<Un
             Log.e(TAG, ex.getMessage());
             throw new IllegalStateException("pushserverUrl was not a valid URL");
         }
+
+        
+
     }
 
     @Override
     public void register(final Context context, final Callback<Void> callback) {
+
+        if (FirebaseApp.getApps(context).size() == 0) {
+            FirebaseOptions options = new FirebaseOptions.Builder().setGcmSenderId(senderId.split(":")[1]).setApplicationId(senderId).build();
+            FirebaseApp.initializeApp(context, options);
+        }
+        
         new AsyncTask<Void, Void, Exception>() {
 
             @Override

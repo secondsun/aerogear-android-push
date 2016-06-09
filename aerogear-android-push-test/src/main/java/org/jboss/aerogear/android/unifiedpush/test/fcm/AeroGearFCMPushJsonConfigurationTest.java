@@ -34,7 +34,7 @@ public class AeroGearFCMPushJsonConfigurationTest
         extends PatchedActivityInstrumentationTestCase {
 
     private static final URI pushServerURL = URI.create("https://localhost:8080/ag-push");
-    private static final String senderId = "123456";
+    private static final String senderId = "1:272275396485:android:f36173e948059ccb";
     private static final String variantID = "8abfae4eb02a6140c0a20798433180a063fd7006";
     private static final String secret = "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8";
 

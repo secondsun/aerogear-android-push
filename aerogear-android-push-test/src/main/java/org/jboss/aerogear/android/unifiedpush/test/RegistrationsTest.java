@@ -46,7 +46,7 @@ public class RegistrationsTest extends PatchedActivityInstrumentationTestCase {
         PushConfiguration config = RegistrarManager
                 .config(PUSH, AeroGearFCMPushConfiguration.class)
                 .setPushServerURI(new URI("http://testreg.com"))
-                .setSenderId("TestID")
+                .setSenderId("1:272275396485:android:f36173e948059ccb")
                 .setVariantID("VariantID")
                 .setSecret("secret");
 
